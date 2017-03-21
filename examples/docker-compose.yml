@@ -1,0 +1,33 @@
+db:
+  image: 'mariadb:10.1.22'
+  container_name: 'timeoff_db'
+  restart: always
+  volumes:
+    - ./volumes/db:/var/lib/mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=timeoff
+    - MYSQL_DATABASE=timeoff
+    - MYSQL_USER=timeoff
+    - MYSQL_PASSWORD=timeoff
+
+app:
+  image: thperret/timeoff-management
+  container_name: 'timeoff_app'
+  links:
+    - db:db
+  restart: always
+  volumes:
+    - ./volumes/config:/opt/timeoff-management/config
+  ports:
+    - '3000:3000'
+  environment:
+    - NODE_ENV=production
+    # - SENDER_MAIL=timeoff@example.com # only set this if you want mail support
+    # - SMTP_HOST=127.0.0.1
+    # - SMTP_PORT=25
+    # - SMTP_USER=timeoff
+    # - SMTP_PASSWORD=timeoff
+    - MYSQL_HOST=db
+    - MYSQL_USER=timeoff
+    - MYSQL_DATABASE=timeoff
+    - MYSQL_PASSWORD=timeoff
