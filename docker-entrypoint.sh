@@ -31,7 +31,7 @@ else
 fi
 
 if [[ -e /opt/timeoff-management/config/crypto_secret ]]; then
-	CRYPTO_SECRET=$(cat crypto_secret)
+	CRYPTO_SECRET=$(cat /opt/timeoff-management/config/crypto_secret)
 else
 	echo -n $(tr -dc A-Za-z0-9_\#\(\)\!: < /dev/urandom | head -c 40 | xargs) > /opt/timeoff-management/config/crypto_secret
 	CRYPTO_SECRET=$(cat crypto_secret)
