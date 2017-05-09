@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ -z $NODE_ENV ]]; then
-	NODE_ENV=production
+	export NODE_ENV=production
 fi
 
 if [[ -n $SENDER_MAIL ]]; then
