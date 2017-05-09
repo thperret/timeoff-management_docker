@@ -102,6 +102,239 @@ fi
 cat > /opt/timeoff-management/config/localisation.json << EOF
 {
   "countries" : {
+    "FR": {
+      "name": "France",
+      "bank_holidays": [
+        {
+          "date": "2016-03-27",
+          "name": "P\u00e2ques"
+        },
+        {
+          "date": "2016-05-05",
+          "name": "L'Ascension"
+        },
+        {
+          "date": "2016-11-01",
+          "name": "La Toussaint"
+        },
+        {
+          "date": "2016-12-31",
+          "name": "la Saint-Sylvestre"
+        },
+        {
+          "date": "2017-05-01",
+          "name": "La f\u00eate du Travail"
+        },
+        {
+          "date": "2017-05-25",
+          "name": "L'Ascension"
+        },
+        {
+          "date": "2017-06-05",
+          "name": "Le lundi de Pentec\u00f4te"
+        },
+        {
+          "date": "2017-12-24",
+          "name": "La veille de No\u00ebl"
+        },
+        {
+          "date": "2017-12-25",
+          "name": "No\u00ebl"
+        },
+        {
+          "date": "2017-12-31",
+          "name": "la Saint-Sylvestre"
+        },
+        {
+          "date": "2018-05-10",
+          "name": "L'Ascension"
+        },
+        {
+          "date": "2016-03-28",
+          "name": "Le lundi de P\u00e2ques"
+        },
+        {
+          "date": "2016-05-01",
+          "name": "La f\u00eate du Travail"
+        },
+        {
+          "date": "2017-04-16",
+          "name": "P\u00e2ques"
+        },
+        {
+          "date": "2017-06-04",
+          "name": "Pentec\u00f4te"
+        },
+        {
+          "date": "2017-07-14",
+          "name": "La f\u00eate nationale"
+        },
+        {
+          "date": "2017-11-11",
+          "name": "L'Armistice"
+        },
+        {
+          "date": "2018-04-02",
+          "name": "Le lundi de P\u00e2ques"
+        },
+        {
+          "date": "2018-05-21",
+          "name": "Le lundi de Pentec\u00f4te"
+        },
+        {
+          "date": "2018-06-17",
+          "name": "F\u00eate des P\u00e8res"
+        },
+        {
+          "date": "2018-07-14",
+          "name": "La f\u00eate nationale"
+        },
+        {
+          "date": "2018-11-11",
+          "name": "L'Armistice"
+        },
+        {
+          "date": "2018-12-24",
+          "name": "La veille de No\u00ebl"
+        },
+        {
+          "date": "2018-12-25",
+          "name": "No\u00ebl"
+        },
+        {
+          "date": "2016-05-16",
+          "name": "Le lundi de Pentec\u00f4te"
+        },
+        {
+          "date": "2016-06-19",
+          "name": "F\u00eate des P\u00e8res"
+        },
+        {
+          "date": "2016-08-15",
+          "name": "L'Assomption"
+        },
+        {
+          "date": "2016-12-24",
+          "name": "La veille de No\u00ebl"
+        },
+        {
+          "date": "2016-12-25",
+          "name": "No\u00ebl"
+        },
+        {
+          "date": "2017-05-08",
+          "name": "F\u00eate de la Victoire 1945"
+        },
+        {
+          "date": "2017-08-15",
+          "name": "L'Assomption"
+        },
+        {
+          "date": "2018-04-01",
+          "name": "P\u00e2ques"
+        },
+        {
+          "date": "2018-05-01",
+          "name": "La f\u00eate du Travail"
+        },
+        {
+          "date": "2018-05-08",
+          "name": "F\u00eate de la Victoire 1945"
+        },
+        {
+          "date": "2018-05-20",
+          "name": "Pentec\u00f4te"
+        },
+        {
+          "date": "2018-05-27",
+          "name": "F\u00eate des M\u00e8res"
+        },
+        {
+          "date": "2018-08-15",
+          "name": "L'Assomption"
+        },
+        {
+          "date": "2018-12-31",
+          "name": "la Saint-Sylvestre"
+        },
+        {
+          "date": "2016-05-08",
+          "name": "F\u00eate de la Victoire 1945"
+        },
+        {
+          "date": "2016-05-15",
+          "name": "Pentec\u00f4te"
+        },
+        {
+          "date": "2016-05-29",
+          "name": "F\u00eate des M\u00e8res"
+        },
+        {
+          "date": "2016-07-14",
+          "name": "La f\u00eate nationale"
+        },
+        {
+          "date": "2016-11-11",
+          "name": "L'Armistice"
+        },
+        {
+          "date": "2017-04-17",
+          "name": "Le lundi de P\u00e2ques"
+        },
+        {
+          "date": "2017-05-28",
+          "name": "F\u00eate des M\u00e8res"
+        },
+        {
+          "date": "2017-06-18",
+          "name": "F\u00eate des P\u00e8res"
+        },
+        {
+          "date": "2017-11-01",
+          "name": "La Toussaint"
+        },
+        {
+          "date": "2018-11-01",
+          "name": "La Toussaint"
+        },
+        {
+          "date": "2016-03-27",
+          "name": "Heure d'\u00e9t\u00e9"
+        },
+        {
+          "date": "2016-10-30",
+          "name": "Heure d'hiver"
+        },
+        {
+          "date": "2017-03-26",
+          "name": "Heure d'\u00e9t\u00e9"
+        },
+        {
+          "date": "2017-10-29",
+          "name": "Heure d'hiver"
+        },
+        {
+          "date": "2018-03-25",
+          "name": "Heure d'\u00e9t\u00e9"
+        },
+        {
+          "date": "2018-10-28",
+          "name": "Heure d'hiver"
+        },
+        {
+          "date": "2016-01-01",
+          "name": "Jour de l'an"
+        },
+        {
+          "date": "2017-01-01",
+          "name": "Jour de l'an"
+        },
+        {
+          "date": "2018-01-01",
+          "name": "Jour de l'an"
+        }
+      ]
+    },
     "DE" : {
       "name" : "Germany",
       "bank_holidays" : [
