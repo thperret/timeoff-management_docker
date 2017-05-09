@@ -37,6 +37,10 @@ else
 	CRYPTO_SECRET=$(cat crypto_secret)
 fi
 
+if [[ -z $APP_URL ]]; then
+	APP_URL=http://app.timeoff.management
+fi
+
 cat > /opt/timeoff-management/config/app.json << EOF
 {
   "allow_create_new_accounts" : true,
@@ -51,7 +55,7 @@ cat > /opt/timeoff-management/config/app.json << EOF
     }
   },
   "crypto_secret" : "$CRYPTO_SECRET",
-  "application_domain" : "http://app.timeoff.management",
+  "application_domain" : "$APP_URL",
   "promotion_website_domain" : "http://timeoff.management"
 }
 EOF

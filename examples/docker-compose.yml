@@ -1,7 +1,7 @@
 db:
   image: 'mariadb:10.1.22'
   container_name: 'timeoff_db'
-  restart: always
+  restart: unless-stopped
   volumes:
     - ./volumes/db:/var/lib/mysql
   environment:
@@ -15,12 +15,13 @@ app:
   container_name: 'timeoff_app'
   links:
     - db:db
-  restart: always
+  restart: unless-stoped
   volumes:
     - ./volumes/config:/opt/timeoff-management/config
   ports:
     - '3000:3000'
   environment:
+    - APP_URL=https://timeoff.example.com
     - NODE_ENV=production
     # - SENDER_MAIL=timeoff@example.com # only set this if you want mail support
     # - SMTP_HOST=127.0.0.1
