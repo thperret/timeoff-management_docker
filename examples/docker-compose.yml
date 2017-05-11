@@ -11,16 +11,17 @@ db:
     - MYSQL_PASSWORD=timeoff
 
 app:
-  image: thperret/timeoff-management
+  image: thperret/timeoff-management:0.4.3
   container_name: 'timeoff_app'
   links:
     - db:db
-  restart: unless-stoped
+  restart: unless-stopped
   volumes:
     - ./volumes/config:/opt/timeoff-management/config
   ports:
     - '3000:3000'
   environment:
+    - ALLOW_ACCOUNTS_CREATION=true  # set this to false to disable public account creation (set it once you have created your company to disable public regitration)
     - APP_URL=https://timeoff.example.com
     - NODE_ENV=production
     # - SENDER_MAIL=timeoff@example.com # only set this if you want mail support

@@ -41,9 +41,13 @@ if [[ -z $APP_URL ]]; then
 	APP_URL=http://app.timeoff.management
 fi
 
+if [[ -z $ALLOW_ACCOUNTS_CREATION ]]; then
+	ALLOW_ACCOUNTS_CREATION=true
+fi
+
 cat > /opt/timeoff-management/config/app.json << EOF
 {
-  "allow_create_new_accounts" : true,
+  "allow_create_new_accounts" : $ALLOW_ACCOUNTS_CREATION,
   "send_emails"              : $SEND_MAILS,
   "application_sender_email" : "$SENDER_MAIL",
   "email_transporter" : {
