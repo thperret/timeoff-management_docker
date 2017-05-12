@@ -11,7 +11,7 @@ db:
     - MYSQL_PASSWORD=timeoff
 
 app:
-  image: thperret/timeoff-management:0.4.3
+  image: thperret/timeoff-management:0.4.4
   container_name: 'timeoff_app'
   links:
     - db:db
