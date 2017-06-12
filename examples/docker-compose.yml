@@ -23,6 +23,7 @@ app:
   environment:
     - ALLOW_ACCOUNTS_CREATION=true  # set this to false to disable public account creation (set it once you have created your company to disable public regitration)
     - APP_URL=https://timeoff.example.com
+    # - PROMOTION_URL=https://timeoff.example.com # uncomment and set this if you want to use you URL for footer promotion url
     - NODE_ENV=production
     # - SENDER_MAIL=timeoff@example.com # only set this if you want mail support
     # - SMTP_HOST=127.0.0.1

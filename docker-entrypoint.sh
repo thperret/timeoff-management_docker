@@ -41,6 +41,10 @@ if [[ -z $APP_URL ]]; then
 	APP_URL=http://app.timeoff.management
 fi
 
+if [[ -z $PROMOTION_URL ]]; then
+	PROMOTION_URL=http://timeoff.management
+fi
+
 if [[ -z $ALLOW_ACCOUNTS_CREATION ]]; then
 	ALLOW_ACCOUNTS_CREATION=true
 fi
@@ -60,7 +64,7 @@ cat > /opt/timeoff-management/config/app.json << EOF
   },
   "crypto_secret" : "$CRYPTO_SECRET",
   "application_domain" : "$APP_URL",
-  "promotion_website_domain" : "http://timeoff.management"
+  "promotion_website_domain" : "$PROMOTION_URL"
 }
 EOF
 
